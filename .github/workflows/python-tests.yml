@@ -23,6 +23,6 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Test with pytest
         env:
-          VXTWITTER_WORKAROUND_TOKENS: ${{ secrets.VXTWITTER_WORKAROUND_TOKENS }}
+          RADTWITTER_WORKAROUND_TOKENS: ${{ secrets.RADTWITTER_WORKAROUND_TOKENS }}
         run: |
           pytest --cov-config=.coveragerc --cov=.

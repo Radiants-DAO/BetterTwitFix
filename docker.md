@@ -1,4 +1,4 @@
-# vxTwitter Docker
+# radTwitter Docker
 
 ## Configuration
 

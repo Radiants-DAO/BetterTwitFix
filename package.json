@@ -8,21 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dylanpdx/BetterTwitFix.git"
+    "url": "git+https://github.com/Radiants-DAO/BetterTwitFix.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dylanpdx/BetterTwitFix/issues"
+    "url": "https://github.com/Radiants-DAO/BetterTwitFix/issues"
   },
-  "homepage": "https://github.com/dylanpdx/BetterTwitFix#readme",
-  "dependencies": {
-    "serverless-wsgi": "^3.0.0"
-  },
+  "homepage": "https://github.com/Radiants-DAO/BetterTwitFix#readme",
   "devDependencies": {
     "serverless-plugin-common-excludes": "^4.0.0",
     "serverless-plugin-include-dependencies": "^5.0.0",
-    "serverless-python-requirements": "^5.4.0"
+    "serverless-python-requirements": "^5.4.0",
+    "serverless-wsgi": "^3.0.3"
   }
 }

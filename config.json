@@ -1,13 +1,13 @@
 {
     "config": {
-        "appname": "vxTwitter",
+        "appname": "radTwitter",
         "color": "#43B581",
         "database": "[url to mongo database goes here]",
         "link_cache": "ram",
         "method": "hybrid",
-        "repo": "https://github.com/dylanpdx/BetterTwitFix",
+        "repo": "https://github.com/Radiants-DAO/BetterTwitFix",
         "table": "[database table here]",
-        "url": "https://vxtwitter.com",
+        "url": "https://radtwitter.com",
         "combination_method": "local",
         "gifConvertAPI": "local",
         "workaroundTokens":null

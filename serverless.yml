@@ -1,4 +1,4 @@
-service: vxTwitter
+service: radTwitter
 
 provider:
   name: aws
@@ -14,21 +14,21 @@ provider:
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
       Resource:
-        - { "Fn::GetAtt": ["vxTwitterDynamoTable", "Arn" ] }
+        - { "Fn::GetAtt": ["radTwitterDynamoTable", "Arn" ] }
   environment:
-    VXTWITTER_CACHE_TABLE: ${self:custom.tableName}
+    RADTWITTER_CACHE_TABLE: ${self:custom.tableName}
     RUNNING_SERVERLESS: 1
-    VXTWITTER_LINK_CACHE: ${env:VXTWITTER_LINK_CACHE, 'json'}
-    VXTWITTER_DATABASE: ${env:VXTWITTER_DATABASE, 'none'}
-    VXTWITTER_METHOD: ${env:VXTWITTER_METHOD, 'hybrid'}
-    VXTWITTER_COLOR: ${env:VXTWITTER_COLOR, '#43B581'}
-    VXTWITTER_APP_NAME: ${env:VXTWITTER_APP_NAME, 'vxTwitter'}
-    VXTWITTER_REPO: ${env:VXTWITTER_REPO, 'https://github.com/dylanpdx/BetterTwitFix'}
-    VXTWITTER_URL: ${env:VXTWITTER_URL, 'https://vxtwitter.com'}
-    VXTWITTER_COMBINATION_METHOD: ${env:VXTWITTER_COMBINATION_METHOD, 'local'}
-    VXTWITTER_GIF_CONVERT_API: ${env:VXTWITTER_GIF_CONVERT_API, ''}
-    VXTWITTER_WORKAROUND_TOKENS: ${env:VXTWITTER_WORKAROUND_TOKENS, ''}
-    VXTWITTER_PROXIES: ${env:VXTWITTER_PROXIES, ''}
+    RADTWITTER_LINK_CACHE: ${env:RADTWITTER_LINK_CACHE, 'json'}
+    RADTWITTER_DATABASE: ${env:RADTWITTER_DATABASE, 'none'}
+    RADTWITTER_METHOD: ${env:RADTWITTER_METHOD, 'hybrid'}
+    RADTWITTER_COLOR: ${env:RADTWITTER_COLOR, '#43B581'}
+    RADTWITTER_APP_NAME: ${env:RADTWITTER_APP_NAME, 'radTwitter'}
+    RADTWITTER_REPO: ${env:RADTWITTER_REPO, 'https://github.com/Radiants-DAO/BetterTwitFix'}
+    RADTWITTER_URL: ${env:RADTWITTER_URL, 'https://radtwitter.com'}
+    RADTWITTER_COMBINATION_METHOD: ${env:RADTWITTER_COMBINATION_METHOD, 'local'}
+    RADTWITTER_GIF_CONVERT_API: ${env:RADTWITTER_GIF_CONVERT_API, ''}
+    RADTWITTER_WORKAROUND_TOKENS: ${env:RADTWITTER_WORKAROUND_TOKENS, ''}
+    RADTWITTER_PROXIES: ${env:RADTWITTER_PROXIES, ''}
 
 package:
   patterns:
@@ -42,7 +42,7 @@ plugins:
   - serverless-plugin-include-dependencies
 
 functions:
-  vxTwitterApp:
+  radTwitterApp:
     handler: wsgi_handler.handler
     url: true
     timeout: 15
@@ -62,7 +62,7 @@ custom:
 	
 resources:
   Resources:
-    vxTwitterDynamoTable:
+    radTwitterDynamoTable:
       Type: 'AWS::DynamoDB::Table'
       Properties:
         AttributeDefinitions:

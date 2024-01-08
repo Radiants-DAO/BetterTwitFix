@@ -4,7 +4,7 @@ from datetime import date,datetime
 import json
 import os
 import boto3
-import vxlogging as log
+import radlogging as log
 
 link_cache_system = config['config']['link_cache']
 link_cache = {}

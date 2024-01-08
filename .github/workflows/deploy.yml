@@ -49,21 +49,21 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::001057775987:role/GithubActionsOIDC-vxtwitter-Role-ZYPHWRSFIP80
+          role-to-assume: arn:aws:iam::001057775987:role/GithubActionsOIDC-radtwitter-Role-ZYPHWRSFIP80
           role-duration-seconds: 900
           aws-region: us-east-1
 
       - name: Deploy
         run: serverless deploy --verbose
         env:
-          VXTWITTER_LINK_CACHE: ${{ secrets.VXTWITTER_LINK_CACHE }}
-          VXTWITTER_DATABASE: ${{ secrets.VXTWITTER_DATABASE }}
-          VXTWITTER_METHOD: ${{ secrets.VXTWITTER_METHOD }}
-          VXTWITTER_COLOR: ${{ secrets.VXTWITTER_COLOR }}
-          VXTWITTER_APP_NAME: ${{ secrets.VXTWITTER_APP_NAME }}
-          VXTWITTER_REPO: ${{ secrets.VXTWITTER_REPO }}
-          VXTWITTER_URL: ${{ secrets.VXTWITTER_URL }}
-          VXTWITTER_COMBINATION_METHOD: ${{ secrets.VXTWITTER_COMBINATION_METHOD }}
-          VXTWITTER_GIF_CONVERT_API: ${{ secrets.VXTWITTER_GIF_CONVERT_API }}
-          VXTWITTER_WORKAROUND_TOKENS: ${{ secrets.VXTWITTER_WORKAROUND_TOKENS }}
-          VXTWITTER_PROXIES: ${{ secrets.VXTWITTER_PROXIES }}
+          RADTWITTER_LINK_CACHE: ${{ secrets.RADTWITTER_LINK_CACHE }}
+          RADTWITTER_DATABASE: ${{ secrets.RADTWITTER_DATABASE }}
+          RADTWITTER_METHOD: ${{ secrets.RADTWITTER_METHOD }}
+          RADTWITTER_COLOR: ${{ secrets.RADTWITTER_COLOR }}
+          RADTWITTER_APP_NAME: ${{ secrets.RADTWITTER_APP_NAME }}
+          RADTWITTER_REPO: ${{ secrets.RADTWITTER_REPO }}
+          RADTWITTER_URL: ${{ secrets.RADTWITTER_URL }}
+          RADTWITTER_COMBINATION_METHOD: ${{ secrets.RADTWITTER_COMBINATION_METHOD }}
+          RADTWITTER_GIF_CONVERT_API: ${{ secrets.RADTWITTER_GIF_CONVERT_API }}
+          RADTWITTER_WORKAROUND_TOKENS: ${{ secrets.RADTWITTER_WORKAROUND_TOKENS }}
+          RADTWITTER_PROXIES: ${{ secrets.RADTWITTER_PROXIES }}

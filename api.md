@@ -1,6 +1,6 @@
 ## API
 
-The VXTwitter API currently returns information about tweets. If you want more functionality added, please [Open an issue!](https://github.com/dylanpdx/BetterTwitFix/issues)
+The RADTwitter API currently returns information about tweets. If you want more functionality added, please [Open an issue!](https://github.com/Radiants-DAO/BetterTwitFix/issues)
 
 The following fields are returned:
 ```js

@@ -14,7 +14,7 @@ import twExtract as twExtract
 from configHandler import config
 from cache import addVnfToLinkCache,getVnfFromLinkCache
 from yt_dlp.utils import ExtractorError
-import vxlogging as log
+import radlogging as log
 import zipfile
 import html
 app = Flask(__name__)
@@ -131,10 +131,10 @@ def twitfix(sub_path):
         # todo: add images to zip
         zipIo.seek(0)
         return make_content_type_response(zipIo,"application/zip")
-    elif request.url.startswith("https://d.vx"): # Matches d.fx? Try to give the user a direct link
+    elif request.url.startswith("https://d.rad"): # Matches d.fx? Try to give the user a direct link
         if isValidUserAgent(user_agent):
             twitter_url = config['config']['url'] + "/"+sub_path
-            log.debug( "d.vx link shown to discord user-agent!")
+            log.debug( "d.rad link shown to discord user-agent!")
             if request.url.endswith(".mp4") and "?" not in request.url:
                 if "?" not in request.url:
                     clean = twitter_url[:-4]
@@ -156,7 +156,7 @@ def twitfix(sub_path):
 
         image = ( int(request.url[-1]) - 1 )
         return embed_video(clean, image)
-    elif request.url.startswith("https://api.vx"):
+    elif request.url.startswith("https://api.rad"):
         twitter_url = "https://twitter.com/" + sub_path
         try:
             try:
